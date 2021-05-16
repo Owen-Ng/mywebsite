@@ -14,7 +14,7 @@ Technology used:
 - NodeJS
 - Express
 - Cors
-- need decide which to choose between sql or mongodb
+- SQL clustered on CockroachDB
 - animejs
 - more to be decided
 # Registered users
