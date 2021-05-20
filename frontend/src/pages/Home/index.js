@@ -1,3 +1,11 @@
+import './index.css';
+import Bar from '../../components/Bar/Bar';
+import Main from '../../components/Main-page/Main';
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div>
+      <Bar name={'Owen'} />
+      <Main name={'Owen'} />
+    </div>
+  );
 }

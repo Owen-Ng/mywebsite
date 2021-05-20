@@ -5,6 +5,7 @@ import About from './pages/About';
 import WorkExperiences from './pages/WorkExperiences';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,9 @@ function App() {
 
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
       </BrowserRouter>

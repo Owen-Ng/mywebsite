@@ -1,0 +1,41 @@
+.main-logo {
+  font-family: 'Charmonman', cursive;
+  border: 1px solid;
+  padding: 0px 30px 0px 30px;
+
+  width: fit-content;
+  border-radius: 15px;
+  font-size: 60px;
+  height: 105px;
+  /* margin: auto; */
+}
+.main-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.character {
+  font-family: 'Charmonman', cursive;
+  border: 1px solid;
+  width: 40px;
+  text-align: center;
+  font-size: 50px;
+  border-radius: 20px;
+  height: 85px;
+  padding: 0px 25px 0px 25px;
+  margin: 25px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.character span {
+  transform: translateZ(20px) scaleY(0);
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.special {
+  margin-top: -20px !important;
+}
