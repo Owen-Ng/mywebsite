@@ -10,12 +10,14 @@ export default function Home() {
       <Main name={'Owen'} />
       <Slides
         title="Projects"
+        link="/projects"
         description="AWDWADJWADOWDAD
       awdwdadawdawdadwadadwadwadadadwadwdwdwawd"
       />
 
       <Slides
         title="Work Experiences"
+        link="/workexperiences"
         description="AWDWADJWADOWDAD
       awdwdadawdawdadwadadwadwadadadwadwdwdwawd"
       />
@@ -28,6 +30,7 @@ export default function Home() {
 
       <Slides
         title="About"
+        link="/about"
         description="AWDWADJWADOWDAD
       awdwdadawdawdadwadadwadwadadadwadwdwdwawd"
       />

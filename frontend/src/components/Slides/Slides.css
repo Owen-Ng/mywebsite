@@ -1,24 +1,23 @@
 .Slides-container {
-  display: grid;
-  /* grid-template-columns: 40% 40%; */
-  grid-template-columns: repeat(auto-fit, 500px);
-  grid-template-rows: 40% 40%;
-  grid-column-gap: 40px;
-  justify-content: center;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
 
   white-space: pre;
   align-items: center;
   height: 100vh;
+  margin: auto;
 }
 .left-box {
   display: flex;
-  flex-flow: column;
-  /* justify-content: flex-end; */
-  margin-left: 90px;
-  width: 300px;
+  flex-direction: column;
 }
 .right-box {
   display: flex;
+  white-space: pre-wrap;
+  margin: 10px;
   width: 300px;
 }
 .Logo-slide {
@@ -27,7 +26,6 @@
   height: 80px;
   padding-left: 10px;
   padding-right: 10px;
-  /* width: 220px; */
   border-radius: 15px;
   border: 1px solid;
   margin: 10px;
@@ -41,6 +39,9 @@
   font-size: 25px;
   border-radius: 15px;
   cursor: pointer;
+}
+.viewmore a {
+  text-decoration: none;
 }
 .description {
   white-space: pre-wrap;

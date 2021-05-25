@@ -39,3 +39,170 @@
 .special {
   margin-top: -20px !important;
 }
+.glowing {
+  z-index: -1;
+  position: absolute;
+  width: 950px;
+  height: 750px;
+  margin: 50px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: roate(360deg);
+  }
+}
+
+.glowing span:nth-child(1) {
+  position: absolute;
+  top: calc(80px * 1);
+  left: calc(80px * 1);
+  bottom: calc(80px * 1);
+  right: calc(80px * 1);
+}
+.glowing span:nth-child(2) {
+  position: absolute;
+  top: calc(80px * 2);
+  left: calc(80px * 2);
+  bottom: calc(80px * 2);
+  right: calc(80px * 2);
+}
+.glowing span:nth-child(3) {
+  position: absolute;
+  top: calc(80px * 3);
+  left: calc(80px * 3);
+  bottom: calc(80px * 3);
+  right: calc(80px * 3);
+}
+.glowing span:nth-child(4) {
+  position: absolute;
+  top: calc(80px * 4);
+  left: calc(80px * 4);
+  bottom: calc(80px * 4);
+  right: calc(80px * 4);
+}
+.glowing span:nth-child(5) {
+  position: absolute;
+  top: calc(80px * 5);
+  left: calc(80px * 5);
+  bottom: calc(80px * 5);
+  right: calc(80px * 5);
+}
+.glowing span:nth-child(6) {
+  position: absolute;
+  top: calc(100px * 6);
+  left: calc(100px * 6);
+  bottom: calc(80px * 6);
+  right: calc(80px * 6);
+}
+
+.glowing span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50px;
+}
+
+.glowing span:nth-child(3n + 1):before {
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1),
+    0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1),
+    0 0 0 8px rgba(134, 255, 0, 0.1);
+}
+.glowing span:nth-child(3n + 2):before {
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1),
+    0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1),
+    0 0 0 8px rgba(255, 214, 0, 0.1);
+}
+.glowing span:nth-child(3n + 3):before {
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1),
+    0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1),
+    0 0 0 8px rgba(0, 226, 255, 0.1);
+}
+.glowing span:nth-child(3n + 4):before {
+  background: rgb(255, 0, 242);
+  box-shadow: 0 0 20px rgb(255, 0, 242), 0 0 40px rgb(255, 0, 242),
+    0 0 60px rgb(255, 0, 242), 0 0 80px rgb(255, 0, 242),
+    0 0 0 8px rgb(255, 0, 242, 0.1);
+}
+.glowing span:nth-child(3n + 5):before {
+  background: rgb(255, 0, 98);
+  box-shadow: 0 0 20px rgb(255, 0, 98), 0 0 40px rgb(255, 0, 98),
+    0 0 60px rgb(255, 0, 98), 0 0 80px rgb(255, 0, 98),
+    0 0 0 8px rgb(255, 0, 98, 0.1);
+}
+.glowing span:nth-child(3n + 6):before {
+  background: rgb(255, 183, 100);
+  box-shadow: 0 0 20px rgb(255, 183, 100), 0 0 40px rgb(255, 183, 100),
+    0 0 60px rgb(255, 183, 100), 0 0 80px rgb(255, 183, 100),
+    0 0 0 8px rgb(255, 183, 100, 0.1);
+}
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 7s alternate infinite;
+}
+.glowing span:nth-child(3n + 6) {
+  animation: rotating 12s alternate infinite;
+}
+.glowing span:nth-child(3n + 4) {
+  animation: animate-reverse 9s alternate infinite;
+}
+.glowing span:nth-child(3n + 5) {
+  animation: animate 10s alternate infinite;
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite;
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

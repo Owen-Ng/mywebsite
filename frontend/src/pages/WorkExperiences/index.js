@@ -1,3 +1,8 @@
+import Bar from '../../components/Bar-subpages/Bar';
 export default function WorkExperiences() {
-  return <h1>WorkExperiencesuhu</h1>;
+  return (
+    <div>
+      <Bar title="Work Experiences" name="Owen"></Bar>
+    </div>
+  );
 }

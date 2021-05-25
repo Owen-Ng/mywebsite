@@ -10,6 +10,14 @@ export default function Main(props) {
         <Button character="C" />
         <Button className="specialcase" character="A" />
       </div>
+      <div className="glowing">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   );
 }

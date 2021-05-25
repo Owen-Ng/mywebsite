@@ -1,3 +1,9 @@
+import Bar from '../../components/Bar-subpages/Bar';
 export default function Projects() {
-  return <h1>Projects</h1>;
+  return (
+    <div>
+      {' '}
+      <Bar title="Projects" name="Owen"></Bar>
+    </div>
+  );
 }

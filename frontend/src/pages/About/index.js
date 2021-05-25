@@ -1,3 +1,8 @@
+import Bar from '../../components/Bar-subpages/Bar';
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <div>
+      <Bar title="About" name="Owen"></Bar>
+    </div>
+  );
 }

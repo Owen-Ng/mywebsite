@@ -8,7 +8,7 @@ export default function (props) {
       <div className="left-box">
         <Logo title={props.title} />
 
-        <ViewMore />
+        <ViewMore link={props.link} />
       </div>
 
       <div className="right-box">
