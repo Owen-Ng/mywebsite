@@ -7,51 +7,35 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import TiltButton from './layout/Button';
 import './Slides.css';
 
-import VanillaTilt from 'vanilla-tilt';
 import React, { useEffect, useRef } from 'react';
 
-function Tilt(props) {
-  const { options, ...rest } = props;
-  const tilt = useRef(null);
-
-  useEffect(() => {
-    VanillaTilt.init(tilt.current, options);
-  }, [options]);
-
-  return <div ref={tilt} {...rest} />;
-}
 export default function (props) {
-  const options = {
-    scale: 1.2,
-    speed: 1000,
-    max: 30,
-  };
   return (
     <div className="Slides-container">
       <div className="left-box">
         <Logo title={props.title} />
         <div className="icons-slides">
-          <Tilt options={options}>
+          <TiltButton>
             <LinkedInIcon id="linkedin" />
-          </Tilt>
-          <Tilt options={options}>
+          </TiltButton>
+          <TiltButton>
             <GitHubIcon id="github" />
-          </Tilt>
-          <Tilt options={options}>
+          </TiltButton>
+          <TiltButton>
             <MailOutlineIcon id="mail" />
-          </Tilt>
-
-          <Tilt options={options}>
+          </TiltButton>
+          <TiltButton>
             <FacebookIcon id="facebook" />
-          </Tilt>
-          <Tilt options={options}>
+          </TiltButton>
+          <TiltButton>
             <TwitterIcon id="twitter" />
-          </Tilt>
-          <Tilt options={options}>
+          </TiltButton>
+          <TiltButton>
             <InstagramIcon id="instagram" />
-          </Tilt>
+          </TiltButton>
         </div>
       </div>
 

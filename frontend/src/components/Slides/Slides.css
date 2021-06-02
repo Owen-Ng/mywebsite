@@ -10,6 +10,7 @@
   height: 100vh;
   margin: auto;
 }
+
 .left-box {
   display: flex;
   flex-direction: column;
@@ -58,6 +59,30 @@
   padding: 10px;
   margin: 10px;
   border-radius: 50px;
+}
+.project-icon svg {
+  border-radius: 10px;
+}
+.project-header span {
+  margin: 10px;
+}
+.project-icon img {
+  border-radius: 10px;
+  color: white;
+  border: 2px solid;
+  padding: 10px;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+}
+.project-description {
+  padding: 10px;
+}
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 #facebook:hover {
   color: #3b5998;

@@ -3,6 +3,7 @@ import Bar from '../../components/Bar/Bar';
 import Main from '../../components/Main-page/Main';
 import Slides from '../../components/Slides/Slides';
 import Contact_slide from '../../components/Slides/Contact-slide';
+
 export default function Home() {
   return (
     <div>
@@ -19,7 +20,9 @@ export default function Home() {
         title="Work Experiences"
         link="/workexperiences"
         description="AWDWADJWADOWDAD
-      awdwdadawdawdadwadadwadwadadadwadwdwdwawd"
+      awdwdadawdawdadwadadwadwadadadwadwdwdwawd
+      awddw
+      wad"
       />
 
       <Contact_slide
