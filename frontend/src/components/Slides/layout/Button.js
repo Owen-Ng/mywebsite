@@ -13,7 +13,6 @@ function Tilt(props) {
 }
 
 export default function (props) {
-  console.log(props);
   const options = {
     scale: 1.2,
     speed: 1000,

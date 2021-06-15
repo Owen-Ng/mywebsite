@@ -7,9 +7,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import {useState} from "react";
 import { Link, useHistory } from 'react-router-dom';
 
-export default function Login() {
-  const [userinfo, setuserinfo] = useState({email:"", password: "", remember:false});
+export default function Register() {
   const history = useHistory();
+  const [userinfo, setuserinfo] = useState({email:"", password: "", passwordcheck:""});
 
   function HandleSubmit(event){
     event.preventDefault();
@@ -25,21 +25,14 @@ export default function Login() {
     })
    
   }
-  function CheckboxHandler(event){
-    const name = event.target.name
-    const val = event.target.checked
-    //prev get old states
-    setuserinfo(prev =>{
-      return {...prev, [name]: val }
-    })
-  }
+
 
   return (
     <section className="container">
       <div className="box">
         <div className="form">
           <h1>MYO Website </h1>
-          <h2>Login</h2>
+          <h2>Register</h2>
           <form onSubmit = {HandleSubmit}>
             <div className="inputBx">
               <input type="text" placeholder="Email" name ="email" value={userinfo.email} onChange={ChangeHandler}/>
@@ -51,27 +44,20 @@ export default function Login() {
               <LockIcon className="icons" />
             </div>
 
-            <FormControlLabel
-              control={
-                <Checkbox
-                  style={{ color: 'white', paddingBlock: 15 }}
-                  
-                  onChange={CheckboxHandler}
-                  checked={userinfo.remember}
-                  name = "remember"
-                />
-              }
-              label="Remember me"
-              
-            />
             <div className="inputBx">
-              <input type="submit" value="Login" />
-              <button id="register" onClick={()=> history.push('/register')}>Create an account</button>
+              <input type="password" placeholder="Re-enter Password" name = "passwordcheck" value = {userinfo.passwordcheck} onChange={ChangeHandler}/>
+              <LockIcon className="icons" />
+            </div>
+
+            <div className="inputBx">
+              <input type="submit" value="Register" />
+             
+            </div>
+            <div className="inputBx">
+            <button id="back" onClick={()=> history.goBack()}>Back to Login Page</button>
             </div>
           </form>
-          <span>
-            Forget <a href="https://www.google.com/">Password</a>
-          </span>
+          
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import WorkExperiences from './pages/WorkExperiences';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Login from './pages/Login';
+import Register from './pages/Register'
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,10 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/register">
+            <Register />
           </Route>
         </Switch>
       </BrowserRouter>

@@ -18,13 +18,15 @@ export default function Button(props) {
     max: 30,
   };
   return (
+    
     <Tilt
       className={
         'PA'.includes(props.character) ? 'character special' : 'character'
       }
       options={options}
     >
-      <span>{props.character}</span>
+      <a>{props.character}</a>
     </Tilt>
+  
   );
 }

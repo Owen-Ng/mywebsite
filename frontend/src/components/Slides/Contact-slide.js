@@ -1,6 +1,5 @@
-import ViewMore from './layout/ViewMore';
+
 import Logo from './layout/Logo';
-import Description from './layout/Description';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -10,13 +9,18 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TiltButton from './layout/Button';
 import './Slides.css';
 
-import React, { useEffect, useRef } from 'react';
+
+
 
 export default function (props) {
+  // const [edit, setedit] = useState(false)
+  // const [description, setdescription] = useState("");
+  // function submitEdit(){
+  //   props.ChangeHandler(props.name, description);
+  //   setedit(false);
+  // }
   return (
-    <div className="Slides-container">
-      <div className="left-box">
-        <Logo title={props.title} />
+
         <div className="icons-slides">
           <TiltButton>
             <LinkedInIcon id="linkedin" />
@@ -37,11 +41,23 @@ export default function (props) {
             <InstagramIcon id="instagram" />
           </TiltButton>
         </div>
-      </div>
+  )}
+    
 
+     
+/* 
       <div className="right-box">
-        <Description description={props.description} />
-      </div>
-    </div>
-  );
-}
+        {edit? <textarea id="textBox" type="text" value={description} name="Input" onChange={(e)=>setdescription(e.target.value)}></textarea> : <Description description={props.description} /> }
+        
+      </div >
+      <div id = "edit">
+      <IconButton  aria-label="edit" size="large" onClick={()=>{setedit(!edit)}}>
+        <EditIcon fontSize="large"/>
+      </IconButton>
+      {edit?<Button variant="contained" color="primary" onClick={()=> submitEdit()} > 
+        Submit
+      </Button>:""}
+      </div> */
+    // </div>
+  // );
+

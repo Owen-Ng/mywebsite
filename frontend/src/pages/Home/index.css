@@ -24,3 +24,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+#logout{
+  position: fixed;
+  color: white;
+  right:0;
+  top: 0;
+  background: grey;
+}

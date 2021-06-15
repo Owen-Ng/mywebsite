@@ -5,10 +5,23 @@ export default function Main(props) {
     <div className="main-container">
       <div className="main-logo">{props.name}</div>
       <div className="buttons">
-        <Button className="specialcase" character="P" />
-        <Button character="W" />
-        <Button character="C" />
-        <Button className="specialcase" character="A" />
+        <div onClick={()=>props.scrolls[0].scrollIntoView({behavior: "smooth"})} >
+          <Button  className="specialcase" character="P" onClick={()=>{console.log("test")
+          props.scrolls[0].scrollIntoView()} }/>
+
+        </div>
+        <div onClick={()=>props.scrolls[1].scrollIntoView({behavior: "smooth"})} >
+        <Button character="W" onClick={()=>props.scrolls[1].scrollIntoView()} />
+        </div>
+
+        <div onClick={()=>props.scrolls[2].scrollIntoView({behavior: "smooth"})} >
+        <Button character="C" onClick={()=>props.scrolls[2].scrollIntoView()} />
+        </div>
+
+        <div onClick={()=>props.scrolls[3].scrollIntoView({behavior: "smooth"})} >
+        <Button className="specialcase" character="A" onClick={()=>props.scrolls[3].scrollIntoView()} />
+        </div>
+
       </div>
       <div className="glowing">
         <span></span>
