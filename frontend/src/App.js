@@ -7,7 +7,10 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Login from './pages/Login';
 import Register from './pages/Register'
+import {useState, useEffect} from 'react';
 function App() {
+ 
+
   return (
     <div className="App">
       <BrowserRouter>
