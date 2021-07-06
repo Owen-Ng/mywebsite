@@ -31,9 +31,9 @@ export default function Slides(props) {
         
       </div >
       <div id = "edit">
-      <IconButton  aria-label="edit" size="large" onClick={()=>{setedit(!edit)}}>
+      {/* <IconButton  aria-label="edit" size="large" onClick={()=>{setedit(!edit)}}>
         <EditIcon fontSize="large"/>
-      </IconButton>
+      </IconButton> */}
       {edit?<Button variant="contained" color="primary" onClick={()=> submitEdit()} > 
         Submit
       </Button>:""}

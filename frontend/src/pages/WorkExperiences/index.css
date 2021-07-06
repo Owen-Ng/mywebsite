@@ -41,3 +41,7 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+.work-company{
+  display: flex;
+  justify-content: space-between;
+}

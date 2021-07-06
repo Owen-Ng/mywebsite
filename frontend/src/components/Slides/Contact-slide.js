@@ -23,15 +23,15 @@ export default function (props) {
 
         <div className="icons-slides">
           <TiltButton>
-            <LinkedInIcon id="linkedin" />
+            <a href="https://www.linkedin.com/in/owen-ng-56b87a1a3/"><LinkedInIcon id="linkedin" /></a>
           </TiltButton>
           <TiltButton>
-            <GitHubIcon id="github" />
+          <a href="https://github.com/Owen-Ng"><GitHubIcon id="github" /></a>
           </TiltButton>
           <TiltButton>
-            <MailOutlineIcon id="mail" />
+            <a href="nigel.ngyanhing@mail.utoronto.ca"><MailOutlineIcon id="mail" /></a>
           </TiltButton>
-          <TiltButton>
+          {/* <TiltButton>
             <FacebookIcon id="facebook" />
           </TiltButton>
           <TiltButton>
@@ -39,7 +39,7 @@ export default function (props) {
           </TiltButton>
           <TiltButton>
             <InstagramIcon id="instagram" />
-          </TiltButton>
+          </TiltButton> */}
         </div>
   )}
     

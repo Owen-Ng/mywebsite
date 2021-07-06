@@ -28,14 +28,14 @@ export default function Home() {
   return (
     <div>
       <Bar name={'Owen'} />
-      <Button id="logout" onClick={Logout}>Log out</Button>
+      {/* <Button id="logout" onClick={Logout}>Log out</Button> */}
       <Main name={'Owen'} scrolls={scrolls}/>
 
       <div ref = {(ref) => {scrolls[0] = ref}}>
           <Slides 
             title="Projects"
             link="/projects"
-            description={descriptions.projectsdescription}
+            description="Here you can learn about the projects I worked on"
             name ="projectsdescription"
             ChangeHandler={ChangeDescription}
           />
@@ -46,7 +46,7 @@ export default function Home() {
             title="Work Experiences"
             link="/workexperiences"
             name="workdescription"
-            description={descriptions.workdescription}
+            description="Here you can find details about my work experiences"
             ChangeHandler={ChangeDescription}
           />
       </div>
@@ -55,7 +55,7 @@ export default function Home() {
       <Slides
         title="Contacts"
         name="contactdescription"
-        description={descriptions.contactdescription}
+        description="You can find my contact informations by clicking on any of the widget circle"
         ChangeHandler={ChangeDescription}
       />
       </div>
@@ -66,7 +66,7 @@ export default function Home() {
         title="About"
         link="/about"
         name = "aboutdescription"
-        description={descriptions.aboutdescription}
+        description="Here you can find more personal details about me"
         ChangeHandler={ChangeDescription}
       />
       </div>
