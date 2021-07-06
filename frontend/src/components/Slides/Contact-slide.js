@@ -13,6 +13,17 @@ import './Slides.css';
 
 
 export default function (props) {
+  function Copy(event){
+    // outputField.focus();
+    const el = document.createElement('textarea');
+    el.value = 'nigel.ngyanhing@mail.utoronto.ca';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+      alert('Email copied to clipboard');
+   
+}
   // const [edit, setedit] = useState(false)
   // const [description, setdescription] = useState("");
   // function submitEdit(){
@@ -28,8 +39,8 @@ export default function (props) {
           <TiltButton>
           <a href="https://github.com/Owen-Ng"><GitHubIcon id="github" /></a>
           </TiltButton>
-          <TiltButton>
-            <a href="nigel.ngyanhing@mail.utoronto.ca"><MailOutlineIcon id="mail" /></a>
+          <TiltButton >
+            <MailOutlineIcon id="mail" onClick={()=>{Copy()}}/>
           </TiltButton>
           {/* <TiltButton>
             <FacebookIcon id="facebook" />
