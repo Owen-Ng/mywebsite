@@ -1,9 +1,11 @@
 import Bar from '../../components/Bar-subpages/Bar';
 import './index.css';
 import Container from './layout/Container';
-export default function WorkExperiences() {
+import {AnimatePresence, motion} from "framer-motion";
+
+export default function WorkExperiences(props) {
   return (
-    <div>
+    <motion.div initial="out" animate="in" exit="out" variants={props.pageTransitions} transition = {{type:'tween', ease:"linear"}}>
       <Bar title="Work Experiences" name="Owen"></Bar>
       <div className="work-slider">
         <Container img="/images/housee.jpg" title="Software Developer" company="Housee Technologies" date="January 2021 - April 2021">
@@ -27,6 +29,6 @@ the webpage using React Native, ReactJs, CSS, Java, Android Studio and JavaScrip
 • Managed agile workflow with Jira and Clickup to increase productivity and efficiency.`}
         </Container>
       </div>
-    </div>
+    </motion.div>
   );
 }

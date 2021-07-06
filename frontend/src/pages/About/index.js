@@ -3,7 +3,9 @@ import Footer from './layout/Footer';
 import './index.css';
 import Description from '../../components/Description';
 import React from 'react';
-export default function About() {
+import {AnimatePresence, motion} from "framer-motion";
+
+export default function About(props) {
   const SlideIndex = React.useRef(1);
   // const [SlideIndex, SetSlideIndex] = React.useState(1);
   const images = {1:"/images/me.jpg",2:"/images/project.jpeg",3:"/images/tennis.jpg"}
@@ -31,7 +33,7 @@ export default function About() {
 
   }
   return (
-    <div>
+    <motion.div initial="out" animate="in" exit="out" variants={props.pageTransitions} transition = {{type:'tween', ease:"linear"}}>
       <Bar title="About" name="Owen"></Bar>
       <div id="Footer-container">
         <Description>
@@ -68,6 +70,6 @@ The reason why I love to code is because I can create something that is useful f
           </div>
       </div>
       <Footer>Made with Love By Owen</Footer>
-    </div>
+    </motion.div>
   );
 }

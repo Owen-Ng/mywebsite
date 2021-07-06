@@ -1,9 +1,10 @@
 import Bar from '../../components/Bar-subpages/Bar';
 import Slides from '../../components/Slides/Projects-slides';
-export default function Projects() {
+import {AnimatePresence, motion} from "framer-motion";
+export default function Projects(props) {
   
   return (
-    <div>
+    <motion.div initial="out" animate="in" exit="out" variants={props.pageTransitions} transition = {{type:'tween', ease:"linear"}} style={{display:'block'}}>
       <Bar title="Projects" name="Owen"></Bar>
       <Slides
         description={
@@ -73,6 +74,6 @@ export default function Projects() {
       projectlink="https://owen-ng.github.io/VsCodeSnippet"
       date="2021"
     />
-    </div>
+    </motion.div>
   );
 }

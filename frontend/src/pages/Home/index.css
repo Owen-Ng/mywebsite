@@ -31,3 +31,16 @@ body {
   top: 0;
   background: grey;
 }
+.up{
+  position: fixed;
+  margin: auto;
+  left:0;
+  right:0;
+  bottom: 10px;
+  border-radius: 50px;
+  border-style: solid;
+  margin: 10;
+  width: 50px;
+  cursor: pointer;
+  border-width: 0.5;
+}

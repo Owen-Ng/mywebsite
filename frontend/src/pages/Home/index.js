@@ -4,10 +4,12 @@ import Main from '../../components/Main-page/Main';
 import Slides from '../../components/Slides/Slides';
 import Contact_slide from '../../components/Slides/Contact-slide';
 import Button from '@material-ui/core/Button';
+import {AnimatePresence, motion} from "framer-motion";
+
 import {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-export default function Home() {
+export default function Home(props) {
   const history = useHistory();
   let scrolls = []
   const [descriptions, setdescriptions] = useState(
@@ -26,10 +28,14 @@ export default function Home() {
     //Some fetch will go here
   }
   return (
-    <div>
+    <motion.div initial ="out"  animate="in" exit="out" variants={props.pageTransitions}>
       <Bar name={'Owen'} />
       {/* <Button id="logout" onClick={Logout}>Log out</Button> */}
+      <div ref = {(ref) => {scrolls[4] = ref}}>
       <Main name={'Owen'} scrolls={scrolls}/>
+
+      </div>
+     
 
       <div ref = {(ref) => {scrolls[0] = ref}}>
           <Slides 
@@ -40,6 +46,7 @@ export default function Home() {
             ChangeHandler={ChangeDescription}
           />
       </div>
+    
 
       <div ref = {(ref) => {scrolls[1] = ref}}>
           <Slides 
@@ -50,6 +57,7 @@ export default function Home() {
             ChangeHandler={ChangeDescription}
           />
       </div>
+  
 
       <div ref = {(ref) => {scrolls[2] = ref}}>
       <Slides
@@ -59,6 +67,7 @@ export default function Home() {
         ChangeHandler={ChangeDescription}
       />
       </div>
+   
 
 
       <div ref = {(ref) => {scrolls[3] = ref}}>
@@ -70,8 +79,13 @@ export default function Home() {
         ChangeHandler={ChangeDescription}
       />
       </div>
+      {/* <div onClick={()=>{scrolls[4].scrollIntoView({behavior:'smooth'})}}> */}
+      {/* <img className="up" src="/images/up.png"></img> */}
+
+      {/* </div> */}
+      
 
 
-    </div>
+    </motion.div>
   );
 }
