@@ -48,6 +48,10 @@ function App(props) {
       <AnimatePresence exitBeforeEnter >
         <Switch location={location} key={location.pathname}>
     <Route path="/workexperiences">
+    <Route path="/">
+    <Home pageTransitions={homeTransitions}/>
+
+          </Route>
             <WorkExperiences pageTransitions={pageTransitions}/>
           </Route>
           <Route path="/home">
