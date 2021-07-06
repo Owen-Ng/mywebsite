@@ -18,16 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 require('dotenv').config();
 const fs = require('fs');
 console.log(process.env.USER);
-const pool = new Pool({
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  host: process.env.HOST,
-  port: process.env.PORT,
-  database: process.env.DB,
-  // ssl: {
-  //   ca: fs.readFileSync('./cc-ca.crt').toString(),
-  // },
-});
+// const pool = new Pool({
+//   user: process.env.USER,
+//   password: process.env.PASSWORD,
+//   host: process.env.HOST,
+//   port: process.env.PORT,
+//   database: process.env.DB,
+//   // ssl: {
+//   //   ca: fs.readFileSync('./cc-ca.crt').toString(),
+//   // },
+// });
 
 //create a session cookie
 app.use(
