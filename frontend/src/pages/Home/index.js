@@ -28,6 +28,7 @@ export default function Home(props) {
     //Some fetch will go here
   }
   return (
+    <div>
     <motion.div initial ="out"  animate="in" exit="out" variants={props.pageTransitions}>
       <Bar name={'Owen'} />
       {/* <Button id="logout" onClick={Logout}>Log out</Button> */}
@@ -67,7 +68,6 @@ export default function Home(props) {
         ChangeHandler={ChangeDescription}
       />
       </div>
-   
 
 
       <div ref = {(ref) => {scrolls[3] = ref}}>
@@ -79,13 +79,14 @@ export default function Home(props) {
         ChangeHandler={ChangeDescription}
       />
       </div>
-      {/* <div onClick={()=>{scrolls[4].scrollIntoView({behavior:'smooth'})}}> */}
-      {/* <img className="up" src="/images/up.png"></img> */}
+       
 
-      {/* </div> */}
+       
       
 
 
     </motion.div>
+          <img className="up" src="/images/up.png" onClick={()=>{scrolls[4].scrollIntoView({behavior:'smooth'})}}/> 
+      </div>
   );
 }
