@@ -24,9 +24,9 @@ const pool = new Pool({
   host: process.env.HOST,
   port: process.env.PORT,
   database: process.env.DB,
-  ssl: {
-    ca: fs.readFileSync('./cc-ca.crt').toString(),
-  },
+  // ssl: {
+  //   ca: fs.readFileSync('./cc-ca.crt').toString(),
+  // },
 });
 
 //create a session cookie
