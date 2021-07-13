@@ -27,6 +27,7 @@ export default function Home(props) {
     history.push('/login');
     //Some fetch will go here
   }
+ 
   return (
     <div>
     <motion.div initial ="out"  animate="in" exit="out" variants={props.pageTransitions}>

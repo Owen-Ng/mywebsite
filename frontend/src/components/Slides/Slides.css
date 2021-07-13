@@ -46,7 +46,7 @@
 }
 .description {
   white-space: pre-wrap;
-  text-align: left;
+  text-align: center;
 }
 .icons-slides {
   display: flex;
@@ -93,6 +93,7 @@
 .project-description {
   text-align: left;
   padding: 10px;
+  
 }
 .project-header {
   display: flex;
