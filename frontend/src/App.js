@@ -47,7 +47,7 @@ function App(props) {
    <div className="App"> 
       <AnimatePresence exitBeforeEnter >
         <Switch location={location} key={location.pathname}>
-        <Route path="/">
+        <Route exact path="/">
     <Home pageTransitions={homeTransitions}/>
 
           </Route>

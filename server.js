@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 require('dotenv').config();
 const fs = require('fs');
-console.log(process.env.USER);
-console.log(process.env.CA)
+// console.log(process.env.USER);
+// console.log(process.env.CA)
 // const pool = new Pool({
 //   user: process.env.USER,
 //   password: process.env.PASSWORD,
@@ -629,7 +629,7 @@ app.get('*', (req, res) => {
   res.sendFile(__dirname + '/frontend/build/index.html');
 });
 
-const port = 5000|| process.env.PORT ;
+const port =  process.env.PORT || 5000 ;
 app.listen(port, () => {
   log(`Listening on port ${port}...`);
 });
