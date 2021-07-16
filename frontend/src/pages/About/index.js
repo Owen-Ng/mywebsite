@@ -44,7 +44,7 @@ The reason why I love to code is because I can create something that is useful f
         </Description>
 
         <h2>Hobbies: Cooking, Projects and  Tennis</h2>
-        <div className="slideshow-container">
+        <div data-aos="zoom-in" className="slideshow-container">
         {/* <img src="/images/me.jpg"/> */}
             {[1,2,3].map(res =>{
               return(

@@ -5,8 +5,9 @@ import Slides from '../../components/Slides/Slides';
 import Contact_slide from '../../components/Slides/Contact-slide';
 import Button from '@material-ui/core/Button';
 import {AnimatePresence, motion} from "framer-motion";
-
-import {useState} from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import {useState,useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 export default function Home(props) {
@@ -27,6 +28,9 @@ export default function Home(props) {
     history.push('/login');
     //Some fetch will go here
   }
+  useEffect(()=>{
+    AOS.init({duration: 1000})
+  })
  
   return (
     <div>
@@ -39,7 +43,7 @@ export default function Home(props) {
       </div>
      
 
-      <div ref = {(ref) => {scrolls[0] = ref}}>
+      <div data-aos="zoom-in-right" ref = {(ref) => {scrolls[0] = ref}}>
           <Slides 
             title="Projects"
             link="/projects"
@@ -50,7 +54,7 @@ export default function Home(props) {
       </div>
     
 
-      <div ref = {(ref) => {scrolls[1] = ref}}>
+      <div data-aos="zoom-in-left" ref = {(ref) => {scrolls[1] = ref}}>
           <Slides 
             title="Work Experiences"
             link="/workexperiences"
@@ -61,7 +65,7 @@ export default function Home(props) {
       </div>
   
 
-      <div ref = {(ref) => {scrolls[2] = ref}}>
+      <div data-aos="zoom-in-right" ref = {(ref) => {scrolls[2] = ref}}>
       <Slides
         title="Contacts"
         name="contactdescription"
@@ -71,7 +75,7 @@ export default function Home(props) {
       </div>
 
 
-      <div ref = {(ref) => {scrolls[3] = ref}}>
+      <div data-aos="zoom-in-left" ref = {(ref) => {scrolls[3] = ref}}>
       <Slides 
         title="About"
         link="/about"
