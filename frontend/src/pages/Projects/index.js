@@ -6,6 +6,7 @@ export default function Projects(props) {
   return (
     <motion.div initial="out" animate="in" exit="out" variants={props.pageTransitions} transition = {{type:'tween', ease:"linear"}} style={{display:'block'}}>
       <Bar title="Projects" name="Owen"></Bar>
+      <div style ={{paddingLeft:20, paddingRight: 20}}>
       <Slides
         description={
         `    Built a webapp allowing user to know approximately how long it will take to receive their pickup deliveries and to share groceries lists amongst families through invitation.
@@ -74,6 +75,7 @@ export default function Projects(props) {
       projectlink="https://owen-ng.github.io/VsCodeSnippet"
       date="2021"
     />
+    </div>
     </motion.div>
   );
 }

@@ -13,8 +13,8 @@ export default function Projects(props) {
   const [edit, setedit] = useState(false)
   const [description, setdescription] = useState("");
   return (
-    <div style={{ backgroundImage: ``, height: 'auto' }}>
-      <div className="project-header">
+    <div style={{ backgroundImage: ``, height: 'auto'}}>
+      <div className="project-header" >
         <div className="icons-slides project-icon">
           <div>
           {props.projectlink?
